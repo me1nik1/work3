@@ -1,9 +1,16 @@
-public class Bicycle {
+public class Bicycle extends WheeledTransport {
 
-    public String modelName;
-    public int wheelsCount;
+    public Bicycle(String modeName, int wheelsCount) {
+        super(modeName, wheelsCount);
+    }
 
+    @Override
     public void updateTyre() {
-        System.out.println("Меняем покрышку");
+        System.out.println("Меняем покрышку у велосипеда");
+    }
+
+    @Override
+    public void service() {
+        updateTyre();
     }
 }
